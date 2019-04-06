@@ -1,46 +1,472 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="83700788-957c-444e-813a-505aea4cd611" name="Default Changelist" comment="" />
+    <list default="true" id="83700788-957c-444e-813a-505aea4cd611" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/FormCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/AddInfoAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/OpenAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/SaveAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/SearchInfoAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/todialog/AddInfoDialogAdapter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/xml/dom/DOMWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/xml/saxparser/ReadParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/tools/xml/saxparser/StudentHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/view/dialogs/InfoDialog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/students.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/.name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/libraries/swt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/swt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/lab2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/StartApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/gui/AddDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/dialogs/AddDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/gui/DeleteDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/dialogs/DeleteDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/gui/FormCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/gui/MainWindow.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/gui/SearchDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/view/dialogs/SearchDialog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/models/FIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/models/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/tools/TypeOfSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/TypeOfSelection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/tools/adapters/AddInfoAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/tools/adapters/ComboTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/ComboTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/tools/adapters/DelInfoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/todialog/DelInfoDialogAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/src/main/java/tools/adapters/SearchInfoAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/tools/adapters/todialog/SearchInfoDialogAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/META-INF/lab2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/StartApp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/gui/AddDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/gui/DeleteDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/gui/FormCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/gui/MainWindow.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/gui/SearchDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/models/FIO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/models/Student.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/tools/TypeOfSelection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/tools/adapters/AddInfoAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/tools/adapters/ComboTypeAdapter$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/tools/adapters/ComboTypeAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/tools/adapters/DelInfoAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lab2/target/classes/tools/adapters/SearchInfoAdapter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="FavoritesManager">
+    <favorites_list name="ppvislaba2" />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="952" />
-    <option name="width" value="977" />
+  <component name="FileEditorManager">
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/AddInfoAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="23" selection-start-line="23" selection-end-line="23" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/Controller.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+                  <folding>
+                    <element signature="method#addStudent#0;class#Controller#0" />
+                    <element signature="method#resizeTable#0;class#Controller#0" />
+                    <element signature="e#1768#1769#0" expanded="true" />
+                    <element signature="e#1802#1803#0" expanded="true" />
+                    <element signature="e#1868#1869#0" expanded="true" />
+                    <element signature="e#1928#1929#0" expanded="true" />
+                    <element signature="e#1988#1989#0" expanded="true" />
+                    <element signature="e#2042#2043#0" expanded="true" />
+                    <element signature="method#toPrevPage#0;class#Controller#0" />
+                    <element signature="method#toLastPage#0;class#Controller#0" />
+                    <element signature="method#toFirstPage#0;class#Controller#0" />
+                    <element signature="method#findStudentByParam#0;class#Controller#0" />
+                    <element signature="method#getAllProgrammingLanguages#0;class#Controller#0" />
+                    <element signature="e#5040#5041#0" expanded="true" />
+                    <element signature="e#5070#5071#0" expanded="true" />
+                    <element signature="method#getPage#0;class#Controller#0" />
+                    <element signature="method#updateTotalRecordsNumLabel#0;class#Controller#0" />
+                    <element signature="method#updateCurrentPageNumber#0;class#Controller#0" />
+                    <element signature="method#updateTable#0;class#Controller#0" />
+                    <element signature="method#clear#0;class#Controller#0" />
+                    <element signature="method#getNumOfPages#0;class#Controller#0" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/AddDialog.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="153">
+                  <caret line="38" selection-start-line="38" selection-end-line="38" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/SearchDialog.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="374">
+                  <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/ComboTypeAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="210">
+                  <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/InfoDialog.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="272">
+                  <caret line="24" column="81" selection-start-line="24" selection-start-column="81" selection-end-line="24" selection-end-column="81" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/SearchInfoAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-243">
+                  <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="199">
+                  <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/todialog/SearchInfoDialogAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/models/Student.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="201">
+                  <caret line="56" selection-start-line="56" selection-end-line="56" />
+                  <folding>
+                    <element signature="e#971#972#0" expanded="true" />
+                    <element signature="e#997#998#0" expanded="true" />
+                    <element signature="e#1032#1033#0" expanded="true" />
+                    <element signature="e#1062#1063#0" expanded="true" />
+                    <element signature="e#1096#1097#0" expanded="true" />
+                    <element signature="e#1125#1126#0" expanded="true" />
+                    <element signature="e#1170#1171#0" expanded="true" />
+                    <element signature="e#1206#1207#0" expanded="true" />
+                    <element signature="e#1245#1246#0" expanded="true" />
+                    <element signature="e#1279#1280#0" expanded="true" />
+                    <element signature="e#1334#1335#0" expanded="true" />
+                    <element signature="e#1380#1381#0" expanded="true" />
+                    <element signature="e#1459#1460#0" expanded="true" />
+                    <element signature="e#1520#1521#0" expanded="true" />
+                    <element signature="e#1572#1573#0" expanded="true" />
+                    <element signature="e#1614#1615#0" expanded="true" />
+                    <element signature="e#1651#1652#0" expanded="true" />
+                    <element signature="e#1712#1713#0" expanded="true" />
+                    <element signature="e#1764#1765#0" expanded="true" />
+                    <element signature="e#1810#1811#0" expanded="true" />
+                    <element signature="e#1852#1853#0" expanded="true" />
+                    <element signature="e#1922#1923#0" expanded="true" />
+                    <element signature="e#1984#1985#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoAdapter.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="278">
+                  <caret line="85" column="83" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="85" selection-end-column="83" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="XML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>fillTable</find>
+      <find>pageIndicatorLabel</find>
+      <find>remove</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/AddInfoDialogAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/dialogs/AddDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/AddInfoAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/StudentBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/TableController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/FormCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoDialogAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/dialogs/DeleteDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/gui/dialogs/SearchDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/todialog/DelInfoDialogAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/FIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Student.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/xml/saxparser/StudentHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/xml/dom/DOMWriter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/students.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/view/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/FormCreator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/models/Content.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/SaveAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/xml/saxparser/ReadParser.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/OpenAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/dialogs/AddDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/dialogs/SearchDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/dialogs/DeleteDialog.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/SearchInfoAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/tools/adapters/ComboTypeAdapter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/view/dialogs/InfoDialog.java" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="983" />
     <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="ppvislaba2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ppvislaba2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ppvislaba2" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="models" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tools" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tools" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="adapters" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tools" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="adapters" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="todialog" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tools" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="xml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tools" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="xml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dom" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="tools" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="xml" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="saxparser" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="view" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="view" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="dialogs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="ppvislaba2" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="ppvislaba2" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="resources" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554512241176" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../javaEpam/taskXML" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\javalessons\pivas\ppvislaba2\src\main\java" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="tools.adapters" />
+      <recent name="view.dialogs" />
+      <recent name="tools" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -54,6 +480,20 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="StartApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StartApp" />
+      <module name="ppvislaba2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StartApp" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -65,36 +505,47 @@
       <option name="presentableId" value="Default" />
       <updated>1553936681433</updated>
       <workItem from="1553937023739" duration="104000" />
+      <workItem from="1554333899959" duration="36970000" />
+      <workItem from="1554443381508" duration="22413000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="104000" />
+    <option name="totallyTimeSpent" value="59487000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="830" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.5228849" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497006" visible="true" weight="0.23624161" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info id="Favorites" order="6" sideWeight="0.502994" side_tool="true" weight="0.47711512" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.32577905" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.29745042" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.5" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295129" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3295129" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013423" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.17335244" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.32719547" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -103,18 +554,558 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.497006" visible="true" weight="0.29819694" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" sideWeight="0.502994" side_tool="true" weight="0.47711512" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.4986577" weight="0.32761088" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4986577" visible="true" weight="0.042979944" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49932885" weight="0.71101576" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5013423" side_tool="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.17422096" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49932885" weight="0.32761088" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Maven Projects" order="7" />
+      <window_info anchor="right" id="Maven" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tools/Controller.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tools/FormCreator.java</url>
+          <line>41</line>
+          <properties />
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tools/FormCreator.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoAdapter.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/tools/Controller.java</url>
+          <line>158</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="combo" />
+      </configuration>
+    </watches-manager>
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lab2/lab2.iml" />
+    <entry file="file://$PROJECT_DIR$/lab2/target/classes/StartApp.class" />
+    <entry file="file://$PROJECT_DIR$/lab2/pom.xml" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        <state>
+          <caret selection-end-line="1" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/StartApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding>
+            <element signature="e#88#89#0" expanded="true" />
+            <element signature="e#138#139#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/ToolItem.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="30" lean-forward="true" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Item.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/TableController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/TypeOfSelection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Control.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="315" selection-start-line="315" selection-end-line="315" />
+          <folding>
+            <element signature="e#9261#9262#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/TableHolder.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/todialog/AddInfoDialogAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/todialog/DelInfoDialogAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="14" column="37" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Shell.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/xml/saxparser/StudentHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/MainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1377">
+          <caret line="115" column="65" selection-start-line="115" selection-start-column="65" selection-end-line="115" selection-end-column="65" />
+          <folding>
+            <element signature="e#3099#3269#0" expanded="true" />
+            <element signature="e#3268#3269#0" expanded="true" />
+            <element signature="e#3423#3593#0" expanded="true" />
+            <element signature="e#3592#3593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Group.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
+          <folding>
+            <element signature="e#958#959#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/EventTable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="117" selection-start-line="117" selection-end-line="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Widget.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="164">
+          <caret line="189" selection-start-line="189" selection-end-line="189" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/Combo.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="1000" selection-start-line="1000" selection-end-line="1000" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/swt.jar!/org/eclipse/swt/widgets/TypedListener.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="110" column="16" lean-forward="true" selection-start-line="110" selection-start-column="16" selection-end-line="110" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/students.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="486" column="46" lean-forward="true" selection-start-line="486" selection-start-column="46" selection-end-line="486" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/FormCreator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="127" column="47" selection-start-line="127" selection-start-column="47" selection-end-line="127" selection-end-column="47" />
+          <folding>
+            <element signature="method#createButton#0;class#FormCreator#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/StudentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/SaveAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/xml/dom/DOMWriter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#450#451#0" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#692#693#0" expanded="true" />
+            <element signature="e#719#720#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/xml/saxparser/ReadParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/OpenAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/FIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/models/Student.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
+          <folding>
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#997#998#0" expanded="true" />
+            <element signature="e#1032#1033#0" expanded="true" />
+            <element signature="e#1062#1063#0" expanded="true" />
+            <element signature="e#1096#1097#0" expanded="true" />
+            <element signature="e#1125#1126#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1206#1207#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1279#1280#0" expanded="true" />
+            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1380#1381#0" expanded="true" />
+            <element signature="e#1459#1460#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1572#1573#0" expanded="true" />
+            <element signature="e#1614#1615#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1712#1713#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1810#1811#0" expanded="true" />
+            <element signature="e#1852#1853#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#1984#1985#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/AddInfoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/AddDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/SearchDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="48" lean-forward="true" selection-start-line="22" selection-start-column="48" selection-end-line="22" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/todialog/SearchInfoDialogAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/DeleteDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="24" column="95" selection-start-line="24" selection-start-column="95" selection-end-line="24" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/SearchInfoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-243">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="39" column="35" selection-start-line="39" selection-start-column="35" selection-end-line="39" selection-end-column="35" />
+          <folding>
+            <element signature="method#addStudent#0;class#Controller#0" />
+            <element signature="method#resizeTable#0;class#Controller#0" />
+            <element signature="e#1768#1769#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+            <element signature="e#1868#1869#0" expanded="true" />
+            <element signature="e#1928#1929#0" expanded="true" />
+            <element signature="e#1988#1989#0" expanded="true" />
+            <element signature="e#2042#2043#0" expanded="true" />
+            <element signature="method#toPrevPage#0;class#Controller#0" />
+            <element signature="method#toLastPage#0;class#Controller#0" />
+            <element signature="method#toFirstPage#0;class#Controller#0" />
+            <element signature="method#findStudentByParam#0;class#Controller#0" />
+            <element signature="method#getAllProgrammingLanguages#0;class#Controller#0" />
+            <element signature="e#5040#5041#0" expanded="true" />
+            <element signature="e#5070#5071#0" expanded="true" />
+            <element signature="method#getPage#0;class#Controller#0" />
+            <element signature="method#updateTotalRecordsNumLabel#0;class#Controller#0" />
+            <element signature="method#updateCurrentPageNumber#0;class#Controller#0" />
+            <element signature="method#updateTable#0;class#Controller#0" />
+            <element signature="method#clear#0;class#Controller#0" />
+            <element signature="method#getNumOfPages#0;class#Controller#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/DelInfoAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/tools/adapters/ComboTypeAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/view/dialogs/InfoDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="24" column="81" selection-start-line="24" selection-start-column="81" selection-end-line="24" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>ppvislaba2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>swt</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
