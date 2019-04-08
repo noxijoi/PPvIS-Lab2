@@ -14,7 +14,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class OpenAdapter extends SelectionAdapter {
-    Controller controller;
+    private Controller controller;
     public OpenAdapter(Controller controller) {
         this.controller = controller;
     }
@@ -32,13 +32,10 @@ public class OpenAdapter extends SelectionAdapter {
             if(selected != null){
                 ReadParser readParser = new ReadParser();
                 List<Student> studentList = readParser.parse(selected);
+                controller.clear();
                 controller.addAllStudents(studentList);
             }
-        } catch (ParserConfigurationException e1) {
-            e1.printStackTrace();
-        } catch (SAXException e1) {
-            e1.printStackTrace();
-        } catch (IOException e1) {
+        } catch (ParserConfigurationException | SAXException | IOException e1) {
             e1.printStackTrace();
         }
     }

@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 
 public class SaveAdapter extends SelectionAdapter {
-    Content content;
+    private Content content;
     public SaveAdapter(Content content) {
         this.content = content;
     }

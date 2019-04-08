@@ -14,20 +14,8 @@ public class Content {
         students.add(student);
     }
 
-    public void remove(Student student) {
-        students.remove(student);
-    }
-
     public void addAll(List<Student> studentList) {
         students.addAll(studentList);
-    }
-
-    public List<Student> getSublist(int i, int data) {
-        return students.subList(i,data);
-    }
-
-    public int getSize() {
-        return students.size();
     }
 
     public List<Student> getStudents() {

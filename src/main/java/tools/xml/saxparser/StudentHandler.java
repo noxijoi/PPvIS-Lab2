@@ -28,18 +28,18 @@ public class StudentHandler extends DefaultHandler {
     private final String NUM_OF_DONE_TASKS = "num-of-done-tasks";
     private final String PROGRAMMING_LANGUAGE = "programming-language";
 
-    String data;
+    private String data;
 
-    Student student;
-    FIO fio;
-    String fName;
-    String lName;
-    String patronymic;
-    int course;
-    int groupNumber;
-    int totalNumOfTasks;
-    int numOfDoneTasks;
-    String programmingLanguage;
+    private Student student;
+    private FIO fio;
+    private String fName;
+    private String lName;
+    private String patronymic;
+    private int course;
+    private int groupNumber;
+    private int totalNumOfTasks;
+    private int numOfDoneTasks;
+    private String programmingLanguage;
 
     public StudentHandler() {
         super();
@@ -109,7 +109,7 @@ public class StudentHandler extends DefaultHandler {
                 break;
             case PROGRAMMING_LANGUAGE:
                 programmingLanguage = data;
-
+                break;
         }
     }
 

@@ -1,7 +1,6 @@
 package tools.adapters;
 
 import org.eclipse.swt.widgets.*;
-import view.dialogs.DeleteDialog;
 import models.FIO;
 import models.Student;
 import org.eclipse.swt.events.SelectionAdapter;
@@ -13,9 +12,9 @@ import view.dialogs.InfoDialog;
 import java.util.List;
 
 public class DelInfoAdapter extends SelectionAdapter {
-    Group paramsGroup;
-    TypeOfSelection type;
-    Controller controller;
+    private Group paramsGroup;
+    private TypeOfSelection type;
+    private Controller controller;
 
 
     public DelInfoAdapter(Group paramsGroup, TypeOfSelection type, Controller controller) {
@@ -27,9 +26,9 @@ public class DelInfoAdapter extends SelectionAdapter {
     @Override
     public void widgetSelected(SelectionEvent e) {
 
-        Group group1 = null;
-        Control[] children1 = null;
-        Group group2 = null;
+        Group group1;
+        Control[] children1 ;
+        Group group2;
         Control[] children2 = null;
 
         group1 = (Group) paramsGroup.getChildren()[0];

@@ -1,6 +1,5 @@
 package tools;
 
-import models.Student;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.layout.GridData;
@@ -12,6 +11,8 @@ import tools.adapters.SaveAdapter;
 import tools.adapters.todialog.AddInfoDialogAdapter;
 import tools.adapters.todialog.DelInfoDialogAdapter;
 import tools.adapters.todialog.SearchInfoDialogAdapter;
+import tools.verifylisteners.VerifyNumberListener;
+import tools.verifylisteners.VerifyWordListener;
 
 import java.util.List;
 
@@ -25,17 +26,21 @@ public class FormCreator {
         Text fNameText = new Text(group, SWT.BORDER);
         GridData textGridData = new GridData();
         textGridData.widthHint = 200;
+        fNameText.addVerifyListener(new VerifyWordListener());
         fNameText.setLayoutData(textGridData);
+
 
         Label lName = new Label(group, SWT.NONE);
         lName.setText("Last Name: ");
         Text lNameText = new Text(group, SWT.BORDER);
         lNameText.setLayoutData(textGridData);
+        lNameText.addVerifyListener(new VerifyWordListener());
 
         Label pName = new Label(group, SWT.NONE);
         pName.setText("Patronymic: ");
         Text pNameText = new Text(group, SWT.BORDER);
         pNameText.setLayoutData(textGridData);
+        pNameText.addVerifyListener(new VerifyWordListener());
         return group;
     }
     public static Group createComboInputProgLang(Composite parent, Controller controller){
@@ -51,15 +56,27 @@ public class FormCreator {
         int i = combo.getItemCount();
         return group;
     }
-    public static Group createInput(Composite parent, String type){
-        Group group = new Group(parent, SWT.SHADOW_ETCHED_IN);
-        group.setLayout(new RowLayout());
-        Label course = new Label(group, SWT.NONE);
-        course.setText(type + ": ");
-        Text text = new Text(group, SWT.BORDER);
+    public static Group createNumericInput(Composite parent, String type){
+        Group group = createInput(parent, type);
+        Text text = textfieldsFromInputGroup(group)[0];
+        text.addVerifyListener(new VerifyNumberListener());
+        return group;
+    }
+    public static Group createWordInput(Composite parent, String type) {
+        Group group = createInput(parent, type);
+        Text text = textfieldsFromInputGroup(group)[0];
+        text.addVerifyListener(new VerifyWordListener());
         return group;
     }
 
+    public static Group createInput(Composite parent, String type) {
+        Group group = new Group(parent, SWT.SHADOW_ETCHED_IN);
+        group.setLayout(new RowLayout());
+        Label label = new Label(group, SWT.NONE);
+        label.setText(type + ": ");
+        Text text = new Text(group, SWT.BORDER);
+        return group;
+    }
     public static Button createButton(Composite parent, String text){
         Button button = new Button(parent, SWT.PUSH);
         button.setText(text);
@@ -74,9 +91,9 @@ public class FormCreator {
         table.setHeaderVisible(true);
         table.setHeaderBackground(GRAY);
         table.setLinesVisible(true);
-        for (int i = 0; i < titles.length ; i++) {
+        for (String title : titles) {
             TableColumn column = new TableColumn(table, SWT.NULL);
-            column.setText(titles[i]);
+            column.setText(title);
         }
         table.getColumn(0).setWidth(400);
         table.getColumn(1).setWidth(80);
@@ -96,13 +113,13 @@ public class FormCreator {
 
         ToolItem  addInfoItem = new ToolItem(toolBar, SWT.PUSH);
         addInfoItem.setText("Add info");
-        addInfoItem.addSelectionListener( new AddInfoDialogAdapter(parent, controller));
+        addInfoItem.addSelectionListener( new AddInfoDialogAdapter(controller));
         ToolItem searchInfoItem = new ToolItem(toolBar, SWT.PUSH);
         searchInfoItem.setText("Search");
-        searchInfoItem.addSelectionListener( new SearchInfoDialogAdapter(parent, controller));
+        searchInfoItem.addSelectionListener( new SearchInfoDialogAdapter(controller));
         ToolItem deleteInfoItem = new ToolItem(toolBar, SWT.PUSH);
         deleteInfoItem.setText("Delete");
-        deleteInfoItem.addSelectionListener( new DelInfoDialogAdapter(parent, controller));
+        deleteInfoItem.addSelectionListener( new DelInfoDialogAdapter(controller));
         ToolItem saveItem = new ToolItem(toolBar, SWT.PUSH);
         saveItem.setText("Save");
         saveItem.addSelectionListener(new SaveAdapter(controller.getContent()));
@@ -113,18 +130,14 @@ public class FormCreator {
         return toolBar;
     }
 
-    public static void addToTable(Table table, List<Student> listForPage) {
-        for (int i = 0; i < listForPage.size(); i++) {
-            Student student = listForPage.get(i);
-            TableItem item = new TableItem(table,SWT.NONE);
-            item.setText(student.toStringArr());
+    public static Text[] textfieldsFromInputGroup(Group group){
+        Control[] children = group.getChildren();
+        Text[] texts = new Text[children.length / 2];
+        for (int i = 0; i < children.length / 2 ; i++) {
+            texts[i] = (Text)children[i * 2 + 1];
         }
-        table.setSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+        return texts;
     }
-    public static void updateTable(Table table, List<Student> newContent)
-    {
-        table.remove(0, table.getItemCount() - 1);
-        addToTable(table, newContent);
-    }
+
 }
 

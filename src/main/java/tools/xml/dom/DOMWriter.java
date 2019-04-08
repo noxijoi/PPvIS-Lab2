@@ -8,6 +8,11 @@ import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.util.List;
 
@@ -27,24 +32,29 @@ public class DOMWriter {
     private final String PROGRAMMING_LANGUAGE = "programming-language";
 
     public File writeToFile(String path, List<Student> students){
+        DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder documentBuilder;
+        File result = new File(path);
         try {
-            DocumentBuilderFactory documentFactory = DocumentBuilderFactory.newInstance();
-            DocumentBuilder documentBuilder;
-            File result = new File(path);
-                documentBuilder = documentFactory.newDocumentBuilder();
-
+            documentBuilder = documentFactory.newDocumentBuilder();
             document = documentBuilder.newDocument();
 
             Element root = document.createElement(STUDENTS);
             document.appendChild(root);
 
-            for (int i = 0; i < students.size() ; i++) {
-                Element studentElement = document.createElement(STUDENT);
-                studentElement = createStudent(students.get(i));
+            for (Student student : students) {
+                Element studentElement = createStudent(student);
                 root.appendChild(studentElement);
             }
-            return  result;
+            TransformerFactory transformerFactory = TransformerFactory.newInstance();
+            Transformer transformer = transformerFactory.newTransformer();
+            DOMSource domSource = new DOMSource(document);
+
+            StreamResult streamResult = new StreamResult(result);
+            transformer.transform(domSource, streamResult);
         } catch (ParserConfigurationException e) {
+            e.printStackTrace();
+        } catch (TransformerException e) {
             e.printStackTrace();
         }
         return null;
@@ -74,7 +84,7 @@ public class DOMWriter {
 
         Element progLangElement = document.createElement(PROGRAMMING_LANGUAGE);
         progLangElement.appendChild(document.createTextNode(student.getProgrammingLanguage()));
-        studentElement.appendChild(numOfDoneTaskElement);
+        studentElement.appendChild(progLangElement);
 
         return studentElement;
     }

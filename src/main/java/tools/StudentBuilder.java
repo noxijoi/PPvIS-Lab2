@@ -25,9 +25,7 @@ public class StudentBuilder {
         int numOfTasks = Integer.parseInt(info.get(NUM_OF_TASKS_KEY));
         int numOfDoneTasks = Integer.parseInt(info.get(NUM_OF_DONE_TASKS_KEY));
         String progLang = info.get(PROG_LANG_KEY);
-
-        Student student = new Student(fio, course, group, numOfTasks, numOfDoneTasks, progLang);
-        return student;
+        return new Student(fio, course, group, numOfTasks, numOfDoneTasks, progLang);
 
     }
 }

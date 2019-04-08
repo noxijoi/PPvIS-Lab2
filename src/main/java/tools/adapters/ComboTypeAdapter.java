@@ -11,13 +11,12 @@ import org.eclipse.swt.widgets.Combo;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Group;
 import tools.TypeOfSelection;
-import tools.adapters.todialog.SearchInfoDialogAdapter;
 
 public class ComboTypeAdapter extends SelectionAdapter {
 
-    Group paramsGroup;
-    Controller controller;
-    String mode;
+    private Group paramsGroup;
+    private Controller controller;
+    private String mode;
     public ComboTypeAdapter(Group deletionParams, Controller controller, String mode) {
         paramsGroup = deletionParams;
         this.controller = controller;
@@ -35,19 +34,19 @@ public class ComboTypeAdapter extends SelectionAdapter {
         paramsGroup.setLayout(rowLayout);
         switch (type){
             case FIO_AND_GROUP:
-                Group fioGroup = FormCreator.createFIOInput(paramsGroup);
-                Group groupGroup = FormCreator.createInput(paramsGroup,"Group");
+                FormCreator.createFIOInput(paramsGroup);
+                FormCreator.createNumericInput(paramsGroup,"Group");
                 break;
             case COURSE_AND_PL:
-                Group courseGroup = FormCreator.createInput(paramsGroup, "Course");
-                Group proglangGroup = FormCreator.createComboInputProgLang(paramsGroup, controller);
+                FormCreator.createNumericInput(paramsGroup, "Course");
+                FormCreator.createComboInputProgLang(paramsGroup, controller);
                 break;
             case NUM_OF_TASKS:
-                Group taskNumGroup = FormCreator.createInput(paramsGroup, "Number of tasks");
-                Group doneTaskNumGroup = FormCreator.createInput(paramsGroup,"Number of done tasks");
+                FormCreator.createNumericInput(paramsGroup, "Number of tasks");
+                FormCreator.createNumericInput(paramsGroup,"Number of done tasks");
                 break;
             case NUM_OF_UNDONE_TASKS:
-                Group undoneTaskNumGroup = FormCreator.createInput(paramsGroup,"Number of undone tasks");
+                FormCreator.createNumericInput(paramsGroup,"Number of undone tasks");
                 break;
         }
         Button submit = new Button(parent, SWT.PUSH);

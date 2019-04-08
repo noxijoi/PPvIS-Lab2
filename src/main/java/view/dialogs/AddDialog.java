@@ -1,7 +1,7 @@
 package view.dialogs;
 
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.*;
 import tools.Controller;
 import tools.FormCreator;
@@ -11,58 +11,44 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class AddDialog {
-    private final int NUM_OF_FIELDS = 8;
-    Text fNameText;
-    Text lNameText;
-    Text pNameText;
-    Text courseText;
-    Text groupText;
-    Text numTasksTest;
-    Text numDoneTasksText;
-    Text progLangText;
 
-    Controller controller;
+    private Text fNameText;
+    private Text lNameText;
+    private Text pNameText;
+    private Text courseText;
+    private Text groupText;
+    private Text numTasksTest;
+    private Text numDoneTasksText;
+    private Text progLangText;
+
+
     public AddDialog(Shell parent, Controller controller){
-        this.controller = controller;
         Shell dialog = new Shell(parent);
-        GridLayout gridLayout = new GridLayout(2, true);
+        RowLayout rowLayout = new RowLayout(SWT.VERTICAL);
         dialog.setText("Add student");
-        dialog.setLayout(gridLayout);
+        dialog.setLayout(rowLayout);
 
-        Label fName = new Label(dialog, SWT.NONE);
-        fName.setText("First Name: ");
-        fNameText = new Text(dialog, SWT.BORDER);
+        Group fioGroup = FormCreator.createFIOInput(dialog);
+        fNameText = FormCreator.textfieldsFromInputGroup(fioGroup)[0];
+        lNameText = FormCreator.textfieldsFromInputGroup(fioGroup)[1];
+        pNameText = FormCreator.textfieldsFromInputGroup(fioGroup)[2];
 
-        Label lName = new Label(dialog, SWT.NONE);
-        lName.setText("Last Name: ");
-        lNameText = new Text(dialog, SWT.BORDER);
+        Group courseGroup = FormCreator.createNumericInput(dialog, "Course");
+        courseText = FormCreator.textfieldsFromInputGroup(courseGroup)[0];
 
-        Label pName = new Label(dialog, SWT.NONE);
-        pName.setText("Patronymic: ");
-        pNameText = new Text(dialog, SWT.BORDER);
+        Group groupGroup = FormCreator.createNumericInput(dialog, "Group");
+        groupText = FormCreator.textfieldsFromInputGroup(groupGroup)[0];
 
-        Label course = new Label(dialog, SWT.NONE);
-        course.setText("Course: ");
-        courseText = new Text(dialog, SWT.BORDER);
+        Group numberOfTaskGroup = FormCreator.createNumericInput(dialog, "Number of tasks");
+        numTasksTest = FormCreator.textfieldsFromInputGroup(numberOfTaskGroup)[0];
 
-        Label group = new Label(dialog, SWT.NONE);
-        group.setText("Group: ");
-        groupText = new Text(dialog, SWT.BORDER);
+        Group numberOfDoneTaskGroup = FormCreator.createNumericInput(dialog, "Done tasks");
+        numDoneTasksText = FormCreator.textfieldsFromInputGroup(numberOfDoneTaskGroup)[0];
 
-        Label numWorks = new Label(dialog, SWT.NONE);
-        numWorks.setText("Number of works: ");
-        numTasksTest = new Text(dialog, SWT.BORDER);
+        Group programmingLanguageGroup = FormCreator.createWordInput(dialog, "Programming language");
+        progLangText = FormCreator.textfieldsFromInputGroup(programmingLanguageGroup)[0];
 
-        Label numDoneWorks = new Label(dialog, SWT.NONE);
-        numDoneWorks.setText("Done works: ");
-        numDoneTasksText = new Text(dialog, SWT.BORDER);
-
-        Label progLang = new Label(dialog, SWT.NONE);
-        progLang.setText("Programming language: ");
-        progLangText = new Text(dialog, SWT.BORDER);
-
-        Button submit = new Button(dialog, SWT.PUSH);
-        submit.setText("Add");
+        Button submit =FormCreator.createButton(dialog, "Add");
         submit.addSelectionListener(new AddInfoAdapter(controller,this));
 
         dialog.pack();

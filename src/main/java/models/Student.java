@@ -23,10 +23,9 @@ public class Student {
     }
 
     public String[] toStringArr(){
-        String[] result ={fio.toString(), Integer.toString(course),
+        return new String[]{fio.toString(), Integer.toString(course),
                 Integer.toString(groupNumber), Integer.toString(totalNumOfTask),
                 Integer.toString(numOfDoneTasks), programmingLanguage};
-        return result;
     }
 
     public FIO getFio() {

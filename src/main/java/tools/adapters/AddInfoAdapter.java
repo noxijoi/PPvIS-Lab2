@@ -10,8 +10,8 @@ import tools.StudentBuilder;
 import java.util.Map;
 
 public class AddInfoAdapter extends SelectionAdapter {
-    Controller controller;
-    AddDialog addDialog;
+    private Controller controller;
+    private AddDialog addDialog;
     public AddInfoAdapter(Controller controller, AddDialog addDialog) {
         this.addDialog = addDialog;
         this.controller = controller;
