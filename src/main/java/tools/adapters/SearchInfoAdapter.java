@@ -1,28 +1,35 @@
 package tools.adapters;
 
-import models.FIO;
+import models.Name;
 import models.Student;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Text;
 import tools.Controller;
 import tools.TypeOfSelection;
-import view.dialogs.InfoDialog;
+import view.TableComponent;
 
 import java.util.List;
 
 public class SearchInfoAdapter extends SelectionAdapter {
     Group paramsGroup;
-    TypeOfSelection type;
+    Combo combo;
     Controller controller;
+    TableComponent resultTable;
 
-    public SearchInfoAdapter(Group paramsGroup, TypeOfSelection type, Controller controller) {
+    public SearchInfoAdapter(Group paramsGroup, Combo type, Controller controller, TableComponent resultTable) {
         this.paramsGroup = paramsGroup;
-        this.type = type;
+        this.combo = type;
         this.controller = controller;
+        this.resultTable = resultTable;
     }
 
     @Override
@@ -42,13 +49,13 @@ public class SearchInfoAdapter extends SelectionAdapter {
         Object firstParam = "";
         Object secondParam = "";
 
+        TypeOfSelection type = TypeOfSelection.getTypeByNumber(combo.getSelectionIndex());
         switch (type){
             case FIO_AND_GROUP:
-                //как то некрасиво
                 Text fName = (Text) children1[1];
                 Text lName = (Text) children1[3];
                 Text pName = (Text) children1[5];
-                firstParam = new FIO(fName.getText(), lName.getText(), pName.getText());
+                firstParam = new Name(fName.getText(), lName.getText(), pName.getText());
 
                 Text groupText = (Text) children2[1];
                 if(!groupText.getText().isEmpty()) {
@@ -81,6 +88,22 @@ public class SearchInfoAdapter extends SelectionAdapter {
                 break;
         }
         List<Student> foundStudents = controller.findStudentByParam(firstParam, secondParam, type);
-        new InfoDialog(foundStudents,"Found students", paramsGroup.getShell());
+        Composite parent = paramsGroup.getParent();
+        resultTable.clear();
+        if(foundStudents.isEmpty()){
+            new Label(parent, SWT.NONE).setText("No such students found");
+        } else {
+            Group tableGroup = new Group(parent, SWT.SHADOW_ETCHED_IN);
+            tableGroup.setLayout(new GridLayout());
+            GridData tableComponentGridData = new GridData();
+            tableComponentGridData.grabExcessHorizontalSpace = true;
+            tableComponentGridData.grabExcessVerticalSpace = true;
+            tableComponentGridData.horizontalAlignment = GridData.FILL;
+            tableComponentGridData.verticalAlignment = GridData.FILL;
+
+            resultTable.addAllStudents(foundStudents);
+            resultTable.setLayoutData(tableComponentGridData);
+            resultTable.setVisible(true);
+        }
     }
 }

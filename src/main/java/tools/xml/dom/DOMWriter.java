@@ -1,6 +1,6 @@
 package tools.xml.dom;
 
-import models.FIO;
+import models.Name;
 import models.Student;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -63,7 +63,7 @@ public class DOMWriter {
     private Element createStudent(Student student) {
         Element studentElement = document.createElement(STUDENT);
 
-        Element fioElement = createFio(student.getFio());
+        Element fioElement = createFio(student.getName());
         studentElement.appendChild(fioElement);
 
         Element courseElement = document.createElement(COURSE);
@@ -89,19 +89,19 @@ public class DOMWriter {
         return studentElement;
     }
 
-    private Element createFio(FIO fio) {
+    private Element createFio(Name name) {
         Element fioElement = document.createElement(FIO);
 
         Element fNameElement = document.createElement(FIRST_NAME);
-        fNameElement.appendChild(document.createTextNode(fio.firstName));
+        fNameElement.appendChild(document.createTextNode(name.firstName));
         fioElement.appendChild(fNameElement);
 
         Element lNameElement = document.createElement(LAST_NAME);
-        lNameElement.appendChild(document.createTextNode(fio.lastName));
+        lNameElement.appendChild(document.createTextNode(name.lastName));
         fioElement.appendChild(lNameElement);
 
         Element patronymicElement = document.createElement(PATRONYMIC);
-        patronymicElement.appendChild(document.createTextNode(fio.patronymic));
+        patronymicElement.appendChild(document.createTextNode(name.patronymic));
         fioElement.appendChild(patronymicElement);
         return fioElement;
     }

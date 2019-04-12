@@ -2,9 +2,6 @@ package tools;
 
 import models.Content;
 import models.Student;
-import org.eclipse.swt.widgets.Label;
-import org.eclipse.swt.widgets.Table;
-import view.TableComponent;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,28 +10,16 @@ import java.util.stream.Stream;
 
 public class Controller {
     private Content content;
-    private TableComponent tableComponent;
-
-    public Controller(Content content, TableComponent tableComponent) {
-        this.content = content;
-        this.tableComponent = tableComponent;
-    }
 
     public Controller(Content content) {
     this.content = content;
     }
 
-    public void setTableComponent(TableComponent tableComponent) {
-        this.tableComponent = tableComponent;
-    }
-
     public void addStudent(Student student){
         content.add(student);
-        tableComponent.addStudent(student);
     }
     public void addAllStudents(List<Student> studentList){
         content.addAll(studentList);
-        tableComponent.addAllStudents(studentList);
     }
     public List<Student> delStudentsByParam(Object firstParam, Object secondParam, TypeOfSelection type) {
         List<Student> students = content.getStudents();
@@ -42,8 +27,6 @@ public class Controller {
         for (Student removedStudent : removedStudents) {
             students.remove(removedStudent);
         }
-        tableComponent.clear();
-        tableComponent.addAllStudents(students);
         return removedStudents;
     }
     public List<Student> findStudentByParam(Object firstParam, Object secondParam, TypeOfSelection type){
@@ -52,7 +35,7 @@ public class Controller {
         switch (type) {
             case FIO_AND_GROUP:
                 foundStudents = students.stream()
-                        .filter(stud -> stud.getFio().equals(firstParam) || stud.getGroupNumber().equals(secondParam))
+                        .filter(stud -> stud.getName().equals(firstParam) || stud.getGroupNumber().equals(secondParam))
                         .collect(Collectors.toList());
                 break;
             case NUM_OF_TASKS:
@@ -90,6 +73,5 @@ public class Controller {
 
     public void clear(){
         content.clear();
-        tableComponent.clear();
     }
 }

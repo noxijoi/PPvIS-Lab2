@@ -1,6 +1,7 @@
 package tools.adapters.todialog;
 
 import tools.Controller;
+import view.TableComponent;
 import view.dialogs.SearchDialog;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;

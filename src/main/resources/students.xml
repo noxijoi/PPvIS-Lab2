@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <students>
     <student>
-        <fio>
+        <name>
             <first-name>Беловокий</first-name>
             <last-name>Дмитрий</last-name>
             <patronymic>Александрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -13,11 +13,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Василевская</first-name>
             <last-name>Дарья</last-name>
             <patronymic>Андреевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -25,11 +25,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Веремейчик</first-name>
             <last-name>Никита</last-name>
             <patronymic>Дмитриевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -37,11 +37,11 @@
         <programming-language>Ruby</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Глущенко</first-name>
             <last-name>Елизавета</last-name>
             <patronymic>Владимировна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -49,11 +49,11 @@
         <programming-language>scg</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Дворниченко</first-name>
             <last-name>Алексей</last-name>
             <patronymic>Александрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -61,11 +61,11 @@
         <programming-language>scp</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Добровольский</first-name>
             <last-name>Олег</last-name>
             <patronymic>Дмитриевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -73,11 +73,11 @@
         <programming-language>C#</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Жак</first-name>
             <last-name>Виктория</last-name>
             <patronymic>Валерьевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>7</total-num-of-tasks>
@@ -85,11 +85,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Кацубо</first-name>
             <last-name>Вадим</last-name>
             <patronymic>Эдуардович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -97,11 +97,11 @@
         <programming-language>JavaScript</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Коваленко</first-name>
             <last-name>Алексей</last-name>
             <patronymic>Васильевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -109,11 +109,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Козелецкий</first-name>
             <last-name>Владислав</last-name>
             <patronymic>Геннадьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -121,11 +121,11 @@
         <programming-language>JavaScript</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Кузьмич</first-name>
             <last-name>Юлия</last-name>
             <patronymic>Сергеевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -133,11 +133,11 @@
         <programming-language>scg</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Лось</first-name>
             <last-name>Павел</last-name>
             <patronymic>Викторович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -145,11 +145,11 @@
         <programming-language>R</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Лузгин</first-name>
             <last-name>Артур</last-name>
             <patronymic>Петрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -157,11 +157,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Маскалева</first-name>
             <last-name>Мария</last-name>
             <patronymic>Алексеевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -169,11 +169,11 @@
         <programming-language>Java</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Медведев</first-name>
             <last-name>Александр</last-name>
             <patronymic>Олегович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -181,11 +181,11 @@
         <programming-language>HTML</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Московкин</first-name>
             <last-name>Владислав</last-name>
             <patronymic>Валерьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -193,11 +193,11 @@
         <programming-language>Java</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Погудо</first-name>
             <last-name>Татьяна</last-name>
             <patronymic>Сергеевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -205,11 +205,11 @@
         <programming-language>scl</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Подворный</first-name>
             <last-name>Антон</last-name>
             <patronymic>Игоревич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -217,11 +217,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Политыкин</first-name>
             <last-name>Денис</last-name>
             <patronymic>Олегович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -229,11 +229,11 @@
         <programming-language>JavaScript</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Сазанчук</first-name>
             <last-name>Диана</last-name>
             <patronymic>Александровна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>7</total-num-of-tasks>
@@ -241,11 +241,11 @@
         <programming-language>scp</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Салей</first-name>
             <last-name>Павел</last-name>
             <patronymic>Михайлович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -253,11 +253,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Стома</first-name>
             <last-name>Кирилл</last-name>
             <patronymic>Александрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -265,11 +265,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Тесловский</first-name>
             <last-name>Александр</last-name>
             <patronymic>Павлович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -277,11 +277,11 @@
         <programming-language>Ruby</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Фролов</first-name>
             <last-name>Александр</last-name>
             <patronymic>Васильевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -289,11 +289,11 @@
         <programming-language>JavaScript</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Шамрук</first-name>
             <last-name>Евгений</last-name>
             <patronymic>Валерьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>1</total-num-of-tasks>
@@ -301,11 +301,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Яковенко</first-name>
             <last-name>Дмитрий</last-name>
             <patronymic>Владимирович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -313,11 +313,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Янчук</first-name>
             <last-name>Игорь</last-name>
             <patronymic>Юрьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -325,11 +325,11 @@
         <programming-language>Java</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Яценко</first-name>
             <last-name>Ярослав</last-name>
             <patronymic>Сергеевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>701</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -337,11 +337,11 @@
         <programming-language>Python</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Ахраменко</first-name>
             <last-name>Мария</last-name>
             <patronymic>Георгиевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -349,11 +349,11 @@
         <programming-language>Ruby</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Баскаков</first-name>
             <last-name>Максим</last-name>
             <patronymic>Александрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -361,11 +361,11 @@
         <programming-language>HTML</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Баснина</first-name>
             <last-name>Анастасия</last-name>
             <patronymic>Павловна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -373,11 +373,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Василевич</first-name>
             <last-name>Илья</last-name>
             <patronymic>Александрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -385,11 +385,11 @@
         <programming-language>scp</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Войтеховский</first-name>
             <last-name>Евгений</last-name>
             <patronymic>Сергеевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -397,11 +397,11 @@
         <programming-language>scg</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Галай</first-name>
             <last-name>Александра</last-name>
             <patronymic>Дмитриевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -409,11 +409,11 @@
         <programming-language>HTML</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Гошко</first-name>
             <last-name>Георгий</last-name>
             <patronymic>Сергеевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -421,11 +421,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Гудкевич</first-name>
             <last-name>Анна</last-name>
             <patronymic>Викторовна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -433,11 +433,11 @@
         <programming-language>Java</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Гурбович</first-name>
             <last-name>Артем</last-name>
             <patronymic>Игоревич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -445,11 +445,11 @@
         <programming-language>HTML</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Гуринович</first-name>
             <last-name>Александр</last-name>
             <patronymic>Александрович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>8</total-num-of-tasks>
@@ -457,11 +457,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Евграфова</first-name>
             <last-name>Юлия</last-name>
             <patronymic>Евгеньевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -469,11 +469,11 @@
         <programming-language>C#</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Залюбова</first-name>
             <last-name>Ольга</last-name>
             <patronymic>Александровна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -481,11 +481,11 @@
         <programming-language>1C</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Икбаев</first-name>
             <last-name>Егор</last-name>
             <patronymic>Андреевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -493,11 +493,11 @@
         <programming-language>scp</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Каленик</first-name>
             <last-name>Павел</last-name>
             <patronymic>Романович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -505,11 +505,11 @@
         <programming-language>scl</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Лашкевич</first-name>
             <last-name>Павел</last-name>
             <patronymic>Юрьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -517,11 +517,11 @@
         <programming-language>HTML</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Лукашевич</first-name>
             <last-name>Ирина</last-name>
             <patronymic>Александровна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -529,11 +529,11 @@
         <programming-language>Python</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Пытель</first-name>
             <last-name>Максим</last-name>
             <patronymic>Сергеевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -541,11 +541,11 @@
         <programming-language>1C</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Салимова</first-name>
             <last-name>Юлия</last-name>
             <patronymic>Сергеевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -553,11 +553,11 @@
         <programming-language>scp</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Сурунтович</first-name>
             <last-name>Артем</last-name>
             <patronymic>Андреевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -565,11 +565,11 @@
         <programming-language>C#</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Смоленский</first-name>
             <last-name>Павел</last-name>
             <patronymic>Михайлович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -577,11 +577,11 @@
         <programming-language>HTML</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Феденко</first-name>
             <last-name>Екатерина</last-name>
             <patronymic>Сергеевна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -589,11 +589,11 @@
         <programming-language>Python</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Швецов</first-name>
             <last-name>Антон</last-name>
             <patronymic>Романович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>702</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -601,11 +601,11 @@
         <programming-language>1C</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Агеенко</first-name>
             <last-name>Маргарита</last-name>
             <patronymic>Валентиновна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -613,11 +613,11 @@
         <programming-language>JavaScript</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Акулич</first-name>
             <last-name>Татьяна</last-name>
             <patronymic>Борисовна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -625,11 +625,11 @@
         <programming-language>Ruby</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Анципович</first-name>
             <last-name>Павел</last-name>
             <patronymic>Валентинович</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>6</total-num-of-tasks>
@@ -637,11 +637,11 @@
         <programming-language>Python</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Баглай</first-name>
             <last-name>Мария</last-name>
             <patronymic>Владимировна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -649,11 +649,11 @@
         <programming-language>C#</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Дубровская</first-name>
             <last-name>Алиса</last-name>
             <patronymic>Михайловна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -661,11 +661,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Загорский</first-name>
             <last-name>Александр</last-name>
             <patronymic>Григорьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>7</total-num-of-tasks>
@@ -673,11 +673,11 @@
         <programming-language>JavaScript</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Клюев</first-name>
             <last-name>Александр</last-name>
             <patronymic>Алексеевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -685,11 +685,11 @@
         <programming-language>Python</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Костяная</first-name>
             <last-name>Юлия</last-name>
             <patronymic>Хамидовна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>
@@ -697,11 +697,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Семенихин</first-name>
             <last-name>Никита</last-name>
             <patronymic>Сергеевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>3</total-num-of-tasks>
@@ -709,11 +709,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Стрижич</first-name>
             <last-name>Анжелика</last-name>
             <patronymic>Олеговна</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -721,11 +721,11 @@
         <programming-language>C#</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Хлызов</first-name>
             <last-name>Тимофей</last-name>
             <patronymic>Витальевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>5</total-num-of-tasks>
@@ -733,11 +733,11 @@
         <programming-language>C++</programming-language>
     </student>
     <student>
-        <fio>
+        <name>
             <first-name>Шитько</first-name>
             <last-name>Максим</last-name>
             <patronymic>Геннадьевич</patronymic>
-        </fio>
+        </name>
         <course>2</course>
         <group-number>703</group-number>
         <total-num-of-tasks>4</total-num-of-tasks>

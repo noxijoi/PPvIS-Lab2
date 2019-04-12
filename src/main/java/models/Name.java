@@ -2,24 +2,24 @@ package models;
 
 import java.util.Objects;
 
-public class FIO {
+public class Name {
     public String firstName;
     public String lastName;
     public String patronymic;
 
-    public FIO(String firstName, String secondName, String patronymic) {
+    public Name(String firstName, String secondName, String patronymic) {
         this.firstName = firstName;
         this.lastName = secondName;
         this.patronymic = patronymic;
     }
 
-    public FIO(String[] fioStrings) {
+    public Name(String[] fioStrings) {
         this.firstName = fioStrings[0];
         this.lastName = fioStrings[1];
         this.patronymic = fioStrings[2];
     }
 
-    public FIO() {
+    public Name() {
 
     }
 
@@ -32,10 +32,10 @@ public class FIO {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        FIO fio = (FIO) o;
-        return Objects.equals(firstName, fio.firstName) &&
-                Objects.equals(lastName, fio.lastName) &&
-                Objects.equals(patronymic, fio.patronymic);
+        Name name = (Name) o;
+        return Objects.equals(firstName, name.firstName) &&
+                Objects.equals(lastName, name.lastName) &&
+                Objects.equals(patronymic, name.patronymic);
     }
 
 

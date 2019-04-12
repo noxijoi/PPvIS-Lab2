@@ -1,26 +1,35 @@
 package tools.adapters;
 
-import org.eclipse.swt.widgets.*;
-import models.FIO;
+import models.Name;
 import models.Student;
+import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.*;
 import tools.Controller;
 import tools.TypeOfSelection;
+import view.TableComponent;
 import view.dialogs.InfoDialog;
 
 import java.util.List;
 
 public class DelInfoAdapter extends SelectionAdapter {
     private Group paramsGroup;
-    private TypeOfSelection type;
+    private Combo combo;
     private Controller controller;
+    private TableComponent resultTable;
+    private TableComponent mainTable;
 
 
-    public DelInfoAdapter(Group paramsGroup, TypeOfSelection type, Controller controller) {
-        this.paramsGroup = paramsGroup;
-        this.type = type;
+    public DelInfoAdapter(Group deletionParams, Combo typeOfDel, Controller controller, TableComponent resultTable, TableComponent tableComponent) {
+        this.paramsGroup = deletionParams;
+        this.combo =typeOfDel;
         this.controller = controller;
+        this.resultTable = resultTable;
+        this.mainTable = tableComponent;
+
     }
 
     @Override
@@ -42,6 +51,7 @@ public class DelInfoAdapter extends SelectionAdapter {
 
         Object firstParam = "";
         Object secondParam = "";
+        TypeOfSelection type = TypeOfSelection.getTypeByNumber(combo.getSelectionIndex());
 
         switch (type){
             case FIO_AND_GROUP:
@@ -49,7 +59,7 @@ public class DelInfoAdapter extends SelectionAdapter {
                 Text fName = (Text) children1[1];
                 Text lName = (Text) children1[3];
                 Text pName = (Text) children1[5];
-                firstParam = new FIO(fName.getText(), lName.getText(), pName.getText());
+                firstParam = new Name(fName.getText(), lName.getText(), pName.getText());
 
                 Text groupText = (Text) children2[1];
                 if(!groupText.getText().isEmpty()) {
@@ -82,6 +92,25 @@ public class DelInfoAdapter extends SelectionAdapter {
                 break;
         }
         List<Student> removedStudents = controller.delStudentsByParam(firstParam, secondParam, type);
-        new InfoDialog(removedStudents,"Removed students", paramsGroup.getShell());
+
+        Composite parent = paramsGroup.getParent();
+        mainTable.clear();
+        mainTable.addAllStudents(controller.getContent().getStudents());
+        resultTable.clear();
+        if(removedStudents.isEmpty()){
+            new Label(parent, SWT.NONE).setText("No such students found");
+        } else {
+            Group tableGroup = new Group(parent, SWT.SHADOW_ETCHED_IN);
+            tableGroup.setLayout(new GridLayout());
+            GridData tableComponentGridData = new GridData();
+            tableComponentGridData.grabExcessHorizontalSpace = true;
+            tableComponentGridData.grabExcessVerticalSpace = true;
+            tableComponentGridData.horizontalAlignment = GridData.FILL;
+            tableComponentGridData.verticalAlignment = GridData.FILL;
+
+            resultTable.addAllStudents(removedStudents);
+            resultTable.setLayoutData(tableComponentGridData);
+            resultTable.setVisible(true);
+        }
     }
 }

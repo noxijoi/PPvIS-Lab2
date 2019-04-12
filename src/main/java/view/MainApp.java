@@ -1,13 +1,11 @@
 package view;
 
 import models.Content;
-import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowLayout;
-import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.ToolBar;
 import tools.Controller;
 import tools.FormCreator;
 
@@ -43,12 +41,6 @@ public class MainApp {
 
         shell.setLayout(gridLayout);
 
-        ToolBar toolBar = FormCreator.createToolBar(shell, controller);
-        GridData toolBarGridData = new GridData();
-        toolBarGridData.verticalSpan = 4;
-        toolBar.setLayoutData(toolBarGridData);
-
-
         GridData tableComponentGridData = new GridData();
         tableComponentGridData.horizontalSpan = 5;
         tableComponentGridData.verticalSpan = 4;
@@ -57,8 +49,12 @@ public class MainApp {
         tableComponentGridData.horizontalAlignment = GridData.FILL;
         tableComponentGridData.verticalAlignment = GridData.FILL;
         tableComponent = new TableComponent(shell);
-        tableComponent.getGroup().setLayoutData(tableComponentGridData);
-        controller.setTableComponent(tableComponent);
+        tableComponent.setLayoutData(tableComponentGridData);
+
+        ToolBar toolBar = FormCreator.createToolBar(shell, controller, tableComponent);
+        GridData toolBarGridData = new GridData();
+        toolBarGridData.verticalSpan = 4;
+        toolBar.setLayoutData(toolBarGridData);
         return shell;
     }
 

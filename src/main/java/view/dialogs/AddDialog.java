@@ -1,71 +1,78 @@
 package view.dialogs;
 
+import models.Name;
+import models.Student;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.RowLayout;
-import org.eclipse.swt.widgets.*;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
 import tools.Controller;
 import tools.FormCreator;
 import tools.adapters.AddInfoAdapter;
+import view.TableComponent;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class AddDialog {
 
-    private Text fNameText;
-    private Text lNameText;
-    private Text pNameText;
-    private Text courseText;
-    private Text groupText;
-    private Text numTasksTest;
-    private Text numDoneTasksText;
-    private Text progLangText;
+    private List<Text> inputFields = new ArrayList<>();
 
 
-    public AddDialog(Shell parent, Controller controller){
+    public AddDialog(Shell parent, Controller controller, TableComponent tableComponent){
         Shell dialog = new Shell(parent);
         RowLayout rowLayout = new RowLayout(SWT.VERTICAL);
         dialog.setText("Add student");
         dialog.setLayout(rowLayout);
 
         Group fioGroup = FormCreator.createFIOInput(dialog);
-        fNameText = FormCreator.textfieldsFromInputGroup(fioGroup)[0];
-        lNameText = FormCreator.textfieldsFromInputGroup(fioGroup)[1];
-        pNameText = FormCreator.textfieldsFromInputGroup(fioGroup)[2];
+        for (Text text : FormCreator.textfieldsFromInputGroup(fioGroup)) {
+            inputFields.add(text);
+        }
+
 
         Group courseGroup = FormCreator.createNumericInput(dialog, "Course");
-        courseText = FormCreator.textfieldsFromInputGroup(courseGroup)[0];
+        inputFields.add(FormCreator.textfieldsFromInputGroup(courseGroup)[0]);
 
         Group groupGroup = FormCreator.createNumericInput(dialog, "Group");
-        groupText = FormCreator.textfieldsFromInputGroup(groupGroup)[0];
+        inputFields.add(FormCreator.textfieldsFromInputGroup(groupGroup)[0]);
 
         Group numberOfTaskGroup = FormCreator.createNumericInput(dialog, "Number of tasks");
-        numTasksTest = FormCreator.textfieldsFromInputGroup(numberOfTaskGroup)[0];
+        inputFields.add(FormCreator.textfieldsFromInputGroup(numberOfTaskGroup)[0]);
 
         Group numberOfDoneTaskGroup = FormCreator.createNumericInput(dialog, "Done tasks");
-        numDoneTasksText = FormCreator.textfieldsFromInputGroup(numberOfDoneTaskGroup)[0];
+        inputFields.add(FormCreator.textfieldsFromInputGroup(numberOfDoneTaskGroup)[0]);
 
-        Group programmingLanguageGroup = FormCreator.createWordInput(dialog, "Programming language");
-        progLangText = FormCreator.textfieldsFromInputGroup(programmingLanguageGroup)[0];
+        Group programmingLanguageGroup = FormCreator.createInput(dialog, "Programming language");
+        inputFields.add(FormCreator.textfieldsFromInputGroup(programmingLanguageGroup)[0]);
 
-        Button submit =FormCreator.createButton(dialog, "Add");
-        submit.addSelectionListener(new AddInfoAdapter(controller,this));
+        Button submit = FormCreator.createButton(dialog, "Add");
+        submit.addSelectionListener(new AddInfoAdapter(controller,this, tableComponent));
 
         dialog.pack();
         dialog.open();
     }
+    public Student getStudent() {
+        long filledfields = inputFields.stream()
+                .filter(x -> !x.getText().isEmpty())
+                .count();
+        if(filledfields == inputFields.size()) {
+            Iterator<Text> fieldsIterator = inputFields.iterator();
+            String[] fioStrings = new String[3];
+            for (int i = 0; i < 3; i++) {
+                fioStrings[i] = fieldsIterator.next().getText();
+            }
+            Name name = new Name(fioStrings);
+            int course = Integer.parseInt(fieldsIterator.next().getText());
+            int group = Integer.parseInt(fieldsIterator.next().getText());
+            int numOfTasks = Integer.parseInt(fieldsIterator.next().getText());
+            int numOfDoneTasks = Integer.parseInt(fieldsIterator.next().getText());
+            String progLang = fieldsIterator.next().getText();
 
-    public Map<String, String> getAllInfo() {
-        Map<String, String> result = new HashMap<>();
-        result.put("fName",fNameText.getText());
-        result.put("lName",lNameText.getText());
-        result.put("patronymic",pNameText.getText());
-        result.put("progLang",progLangText.getText());
-        result.put("course",courseText.getText());
-        result.put("group",groupText.getText());
-        result.put("numOfTasks", numTasksTest.getText());
-        result.put("numOfDoneTasks", numDoneTasksText.getText());
-
-        return result;
+            return new Student(name, course, group, numOfTasks, numOfDoneTasks, progLang);
+        } else {
+            return null;
+        }
     }
 }

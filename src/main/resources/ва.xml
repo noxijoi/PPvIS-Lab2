@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<students>
+    <student>
+        <name>
+            <first-name>й</first-name>
+            <last-name>й</last-name>
+            <patronymic>й</patronymic>
+        </name>
+        <course>1</course>
+        <group-number>1</group-number>
+        <total-num-of-tasks>1</total-num-of-tasks>
+        <num-of-done-tasks>1</num-of-done-tasks>
+        <programming-language>1С</programming-language>
+    </student>
+</students>

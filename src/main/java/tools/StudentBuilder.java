@@ -1,6 +1,6 @@
 package tools;
 
-import models.FIO;
+import models.Name;
 import models.Student;
 
 import java.util.Map;
@@ -14,18 +14,19 @@ public class StudentBuilder {
     private final String GROUP_KEY = "group";
     private final String NUM_OF_TASKS_KEY = "numOfTasks";
     private final String NUM_OF_DONE_TASKS_KEY = "numOfDoneTasks";
+
     public Student buildStudent(Map<String,String> info){
         String[] fioStrings = new String[3];
         fioStrings[0] = info.get(F_NAME_KEY);
         fioStrings[1] = info.get(L_NAME_KEY);
         fioStrings[2] = info.get(P_NAME_KEY);
-        FIO fio = new FIO(fioStrings);
+        Name name = new Name(fioStrings);
         int course = Integer.parseInt(info.get(COURSE_KEY));
         int group = Integer.parseInt(info.get(GROUP_KEY));
         int numOfTasks = Integer.parseInt(info.get(NUM_OF_TASKS_KEY));
         int numOfDoneTasks = Integer.parseInt(info.get(NUM_OF_DONE_TASKS_KEY));
         String progLang = info.get(PROG_LANG_KEY);
-        return new Student(fio, course, group, numOfTasks, numOfDoneTasks, progLang);
+        return new Student(name, course, group, numOfTasks, numOfDoneTasks, progLang);
 
     }
 }

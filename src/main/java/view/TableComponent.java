@@ -7,13 +7,9 @@ import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.*;
-import org.eclipse.swt.widgets.Button;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Label;
 import tools.FormCreator;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -31,6 +27,7 @@ public class TableComponent {
         group.setRedraw(true);
         GridLayout gridLayout = new GridLayout();
         gridLayout.numColumns = 5;
+        gridLayout.makeColumnsEqualWidth = true;
         group.setLayout(gridLayout);
         table = FormCreator.createTable(group,recordsPerPage);
         GridData tableGridData = new GridData();
@@ -93,6 +90,7 @@ public class TableComponent {
         Combo linesChoose = new Combo(group, SWT.READ_ONLY);
         String[] items ={"10", "20", "30"};
         linesChoose.setText("10");
+        linesChoose.setVisible(true);
         linesChoose.setItems(items);
         linesChoose.addSelectionListener(new SelectionAdapter() {
             @Override
@@ -130,12 +128,10 @@ public class TableComponent {
     private void updateTable() {
         table.removeAll();
         List<Student> listForPage = getPage(currentPage);
-        for (int i = 0; i < listForPage.size(); i++) {
-            Student student = listForPage.get(i);
-            TableItem item = new TableItem(table,SWT.NONE);
-            item.setText(student.toStringArr());
+        for (Student student : listForPage) {
+            TableItem item = new TableItem(table, SWT.NONE);
+            item.setText(studentToStringArr(student));
         }
-        table.setSize(table.computeSize(SWT.DEFAULT, SWT.DEFAULT));
     }
 
     private List<Student> getPage(int pageNum) {
@@ -203,16 +199,14 @@ public class TableComponent {
         totalRecordsNum.setText("total number of records : " + n);
     }
     private void resize(int numOfRecords){
-        int rows = table.getItemCount();
-        table.setSize(table.computeSize(SWT.DEFAULT, 300));
         recordsPerPage = numOfRecords;
         updateCurrentPageNumber();
         updatePageIndicatorLabel();
         updateTable();
         group.setSize(group.computeSize(SWT.DEFAULT, SWT.DEFAULT));
+        table.setSize(table.computeSize(SWT.DEFAULT, 300));
         Composite parent = group.getShell();
         parent.setSize(parent.computeSize(SWT.DEFAULT, SWT.DEFAULT));
-        parent.pack();
     }
 
     private void updateCurrentPageNumber() {
@@ -220,6 +214,20 @@ public class TableComponent {
             currentPage = getNumOfPages() - 1;
         }
     }
+    private String[] studentToStringArr(Student student){
+        return new String[]{student.getName().toString(),
+                            student.getCourse().toString(),
+                            student.getGroupNumber().toString(),
+                            student.getTotalNumOfTask().toString(),
+                            student.getNumOfDoneTasks().toString(),
+                            student.getProgrammingLanguage()
+        };
+    }
+    public void setLayoutData(GridData tableComponentGridData) {
+        group.setLayoutData(tableComponentGridData);
+    }
 
-
+    public void setVisible(boolean b) {
+        group.setVisible(b);
+    }
 }

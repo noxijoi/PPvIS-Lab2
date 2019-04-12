@@ -2,7 +2,7 @@ package tools.verifylisteners;
 
 import org.eclipse.swt.events.VerifyEvent;
 import org.eclipse.swt.events.VerifyListener;
-
+//не объединять по типу
 public class VerifyNumberListener implements VerifyListener {
     @Override
     public void verifyText(VerifyEvent verifyEvent) {

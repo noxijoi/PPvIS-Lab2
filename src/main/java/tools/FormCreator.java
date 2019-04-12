@@ -13,6 +13,7 @@ import tools.adapters.todialog.DelInfoDialogAdapter;
 import tools.adapters.todialog.SearchInfoDialogAdapter;
 import tools.verifylisteners.VerifyNumberListener;
 import tools.verifylisteners.VerifyWordListener;
+import view.TableComponent;
 
 import java.util.List;
 
@@ -108,24 +109,24 @@ public class FormCreator {
         return table;
     }
 
-    public static ToolBar createToolBar(Shell parent, Controller controller){
+    public static ToolBar createToolBar(Shell parent, Controller controller, TableComponent tableComponent){
         ToolBar toolBar = new ToolBar(parent, SWT.VERTICAL);
 
         ToolItem  addInfoItem = new ToolItem(toolBar, SWT.PUSH);
         addInfoItem.setText("Add info");
-        addInfoItem.addSelectionListener( new AddInfoDialogAdapter(controller));
+        addInfoItem.addSelectionListener( new AddInfoDialogAdapter(controller, tableComponent));
         ToolItem searchInfoItem = new ToolItem(toolBar, SWT.PUSH);
         searchInfoItem.setText("Search");
         searchInfoItem.addSelectionListener( new SearchInfoDialogAdapter(controller));
         ToolItem deleteInfoItem = new ToolItem(toolBar, SWT.PUSH);
         deleteInfoItem.setText("Delete");
-        deleteInfoItem.addSelectionListener( new DelInfoDialogAdapter(controller));
+        deleteInfoItem.addSelectionListener( new DelInfoDialogAdapter(controller, tableComponent));
         ToolItem saveItem = new ToolItem(toolBar, SWT.PUSH);
         saveItem.setText("Save");
         saveItem.addSelectionListener(new SaveAdapter(controller.getContent()));
         ToolItem openItem = new ToolItem(toolBar, SWT.PUSH);
         openItem.setText("Open");
-        openItem.addSelectionListener(new OpenAdapter(controller));
+        openItem.addSelectionListener(new OpenAdapter(controller, tableComponent));
         toolBar.pack();
         return toolBar;
     }

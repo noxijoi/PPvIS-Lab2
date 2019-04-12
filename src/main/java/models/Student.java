@@ -1,16 +1,16 @@
 package models;
 
 public class Student {
-    private FIO fio;
+    private Name name;
     private Integer course;
     private Integer groupNumber;
     private Integer totalNumOfTask;
     private Integer numOfDoneTasks;
     private String programmingLanguage;
 
-    public Student(FIO fio, int course, int groupNumber,
+    public Student(Name name, int course, int groupNumber,
                    int totalNumOfTask, int numOfDoneTasks, String programmingLanguage) {
-        this.fio = fio;
+        this.name = name;
         this.course = course;
         this.groupNumber = groupNumber;
         this.totalNumOfTask = totalNumOfTask;
@@ -19,21 +19,14 @@ public class Student {
     }
 
     public Student() {
-
     }
 
-    public String[] toStringArr(){
-        return new String[]{fio.toString(), Integer.toString(course),
-                Integer.toString(groupNumber), Integer.toString(totalNumOfTask),
-                Integer.toString(numOfDoneTasks), programmingLanguage};
+    public Name getName() {
+        return name;
     }
 
-    public FIO getFio() {
-        return fio;
-    }
-
-    public void setFio(FIO fio) {
-        this.fio = fio;
+    public void setName(Name name) {
+        this.name = name;
     }
 
     public Integer getCourse() {

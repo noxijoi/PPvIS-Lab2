@@ -16,11 +16,12 @@ public class ComboTypeAdapter extends SelectionAdapter {
 
     private Group paramsGroup;
     private Controller controller;
-    private String mode;
-    public ComboTypeAdapter(Group deletionParams, Controller controller, String mode) {
-        paramsGroup = deletionParams;
+    private Button actionButton;
+
+    public ComboTypeAdapter(Group paramsGroup, Controller controller, Button actionButton) {
+        this.paramsGroup = paramsGroup;
         this.controller = controller;
-        this.mode = mode;
+        this.actionButton = actionButton;
     }
 
     @Override
@@ -29,7 +30,6 @@ public class ComboTypeAdapter extends SelectionAdapter {
         Composite parent = combo.getParent();
         int index = combo.getSelectionIndex();
         TypeOfSelection type = TypeOfSelection.getTypeByNumber(index);
-        paramsGroup = new Group(parent, SWT.SHADOW_ETCHED_IN);
         RowLayout rowLayout = new RowLayout();
         paramsGroup.setLayout(rowLayout);
         switch (type){
@@ -49,19 +49,9 @@ public class ComboTypeAdapter extends SelectionAdapter {
                 FormCreator.createNumericInput(paramsGroup,"Number of undone tasks");
                 break;
         }
-        Button submit = new Button(parent, SWT.PUSH);
-        switch (mode){
-            case "search":
-                submit.addSelectionListener(new SearchInfoAdapter(paramsGroup, type, controller));
-                submit.setText(mode);
-                break;
-            case  "delete":
-                submit.addSelectionListener(new DelInfoAdapter(paramsGroup, type, controller));
-                submit.setText(mode);
-                break;
-        }
-
         combo.setEnabled(false);
+        paramsGroup.setVisible(true);
+        actionButton.setEnabled(true);
         parent.pack();
     }
 }

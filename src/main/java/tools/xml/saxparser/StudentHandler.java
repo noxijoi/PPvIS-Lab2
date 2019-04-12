@@ -1,6 +1,6 @@
 package tools.xml.saxparser;
 
-import models.FIO;
+import models.Name;
 import models.Student;
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -17,7 +17,7 @@ public class StudentHandler extends DefaultHandler {
     }
 
     private final String STUDENTS = "students";
-    private final String FIO = "fio";
+    private final String FIO = "name";
     private final String STUDENT = "student";
     private final String FIRST_NAME = "first-name";
     private final String LAST_NAME = "last-name";
@@ -31,7 +31,7 @@ public class StudentHandler extends DefaultHandler {
     private String data;
 
     private Student student;
-    private FIO fio;
+    private Name name;
     private String fName;
     private String lName;
     private String patronymic;
@@ -62,7 +62,7 @@ public class StudentHandler extends DefaultHandler {
                 student = new Student();
                 break;
             case FIO:
-                fio = new FIO();
+                name = new Name();
                 break;
                 default:
                     break;
@@ -74,7 +74,7 @@ public class StudentHandler extends DefaultHandler {
         switch (qName){
             case STUDENT:
                 student.setCourse(course);
-                student.setFio(fio);
+                student.setName(name);
                 student.setGroupNumber(groupNumber);
                 student.setNumOfDoneTasks(numOfDoneTasks);
                 student.setProgrammingLanguage(programmingLanguage);
@@ -82,9 +82,9 @@ public class StudentHandler extends DefaultHandler {
                 students.add(student);
                 break;
             case FIO:
-                fio.firstName = fName;
-                fio.lastName = lName;
-                fio.patronymic = patronymic;
+                name.firstName = fName;
+                name.lastName = lName;
+                name.patronymic = patronymic;
                 break;
             case FIRST_NAME:
                 fName = data;

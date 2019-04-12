@@ -4,13 +4,8 @@ import models.Student;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.layout.RowData;
-import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
-import org.eclipse.swt.widgets.Table;
-import org.eclipse.swt.widgets.ToolBar;
-import tools.FormCreator;
 import view.TableComponent;
 
 import java.util.List;
@@ -38,7 +33,7 @@ public class InfoDialog {
             table.addAllStudents(studentList);
             table.getGroup().setLayoutData(tableComponentGridData);
         }
-        shell.pack();
+        //shell.pack();
         shell.open();
     }
 }
